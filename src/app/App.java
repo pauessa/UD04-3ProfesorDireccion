@@ -5,6 +5,7 @@
  */
 package app;
 
+import model.Direccion;
 import model.Profesor;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -28,7 +29,9 @@ public class App {
         SessionFactory factory = new Configuration().configure().buildSessionFactory(); 
 
         // CREAMOS UN OBJETO
+        Direccion direccion=new Direccion(8, "calle Reina", 5, "Xativa", "Valencia");
         Profesor profesor=new Profesor(80,"Pepe","Garcia","Perez");
+        profesor.setDireccion(direccion);
 
         //CREAR UNA SESION
         Session session=factory.openSession();

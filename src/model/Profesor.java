@@ -16,6 +16,7 @@ import java.io.Serializable;
       private String nombre;
       private String ape1;
       private String ape2;
+      private Direccion direccion;
  
       public Profesor(){
       }
@@ -57,6 +58,14 @@ import java.io.Serializable;
 
     public void setApe2(String ape2) {
         this.ape2 = ape2;
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
     }
     
  }
